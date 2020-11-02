@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             fireRateTimer = 0;
         }
 
-        Debug.Log("Timer:" + fireRateTimer);
+        //Debug.Log("Timer:" + fireRateTimer);
 
         //Key press check for shooting the projectile
         if (Input.GetKey(KeyCode.Space) && fireRateTimer <= 0)
