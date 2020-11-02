@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 
     public float xRange = 24;
 
+    private float fireRateTimer = 1;
+    [SerializeField] private float fireRate = 1;
+
     public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -33,12 +36,30 @@ public class PlayerController : MonoBehaviour
         //Move the player
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        //Key press check for shooting the projectile
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (fireRateTimer >=0)
         {
-            //Shoot the projectile
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            fireRateTimer -= Time.deltaTime;
         }
 
+        Debug.Log(fireRateTimer);
+
+        //Key press check for shooting the projectile
+        if (Input.GetKey(KeyCode.Space) && fireRateTimer <= 0)
+        {
+            Shoot();
+        }
+
+    }
+
+    void Shoot()
+    {
+        //Shoot the projectile
+        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        ResetTimer();
+    }
+
+    void ResetTimer()
+    {
+        fireRateTimer = fireRate;
     }
 }

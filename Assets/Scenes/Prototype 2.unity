@@ -972,6 +972,7 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 30
   xRange: 22
+  fireRate: 0.1
   projectilePrefab: {fileID: 8415682660023974952, guid: ce147be9adfdf184b8da05f766b17a7f,
     type: 3}
 --- !u!1001 &6893344225051562805
