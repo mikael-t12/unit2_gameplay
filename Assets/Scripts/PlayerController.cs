@@ -37,9 +37,14 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
         //IF the firerate is higher than 0, count it down.
-        if (fireRateTimer >=0)
+        if (fireRateTimer > 0)
         {
             fireRateTimer -= Time.deltaTime;
+        }
+        //Set the firerate timer to 0
+        else
+        {
+            fireRateTimer = 0;
         }
 
         Debug.Log("Timer:" + fireRateTimer);
