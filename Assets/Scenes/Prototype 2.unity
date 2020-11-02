@@ -700,7 +700,7 @@ RectTransform:
   m_GameObject: {fileID: 1006555811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743014525}
   m_RootOrder: 0
@@ -730,16 +730,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 0
+    m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 62
+    m_MaxSize: 118
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: GAME OVER!!!!!
 --- !u!222 &1006555814
@@ -970,9 +970,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 20
+  speed: 11
   xRange: 22
-  fireRate: 0.7
+  fireRate: 0.4
   projectilePrefab: {fileID: 8415682660023974952, guid: ce147be9adfdf184b8da05f766b17a7f,
     type: 3}
 --- !u!1001 &6893344225051562805
