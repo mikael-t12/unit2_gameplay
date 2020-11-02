@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject gameOverScreen;
+    [SerializeField]private GameObject gameOverScreen;
 
     //Boolean variable for game's status if it's over or not.
     bool gameOver = false;

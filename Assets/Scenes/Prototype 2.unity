@@ -741,7 +741,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: GAME OVER!!!!!
 --- !u!222 &1006555814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1213,6 +1213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Food_Cookie_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415682660023974952, guid: ce147be9adfdf184b8da05f766b17a7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8415682660023869448, guid: ce147be9adfdf184b8da05f766b17a7f,
         type: 3}
