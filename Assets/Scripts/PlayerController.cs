@@ -36,30 +36,32 @@ public class PlayerController : MonoBehaviour
         //Move the player
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
+        //IF the firerate is higher than 0, count it down.
         if (fireRateTimer >=0)
         {
             fireRateTimer -= Time.deltaTime;
         }
 
-        Debug.Log(fireRateTimer);
+        Debug.Log("Timer:" + fireRateTimer);
 
         //Key press check for shooting the projectile
         if (Input.GetKey(KeyCode.Space) && fireRateTimer <= 0)
         {
+            //Call the shooting function
             Shoot();
         }
 
     }
-
     void Shoot()
     {
         //Shoot the projectile
         Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        //Call to reset the timer
         ResetTimer();
     }
-
     void ResetTimer()
     {
+        //Reset the timer to the firerate.
         fireRateTimer = fireRate;
     }
 }
