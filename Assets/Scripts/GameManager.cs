@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
         if (gameOver == true)
         {
             gameOverScreen.SetActive(true);
+            //Set the timescale to 0 after the game is over.
+            Time.timeScale = 0;
         }
     }
 }
