@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public float xRange = 24;
 
-    private float fireRateTimer = 1;
+    private float fireRateTimer = 0;
     [SerializeField] private float fireRate = 1;
 
     public GameObject projectilePrefab;
